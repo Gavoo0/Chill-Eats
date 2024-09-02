@@ -11,6 +11,18 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'tiendas',
+    loadChildren: () => import('./tiendas/tiendas.module').then( m => m.TiendasPageModule)
+  },
+  {
+    path: 'cupones',
+    loadChildren: () => import('./cupones/cupones.module').then( m => m.CuponesPageModule)
+  },
+  {
+    path: 'perfil',
+    loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
+  },
 ];
 
 @NgModule({
